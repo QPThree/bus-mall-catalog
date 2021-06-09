@@ -35,22 +35,36 @@ function handleSubmit(event) {
 
 }
 
-// TODO: Add the selected item and quantity to the cart
+// DONE: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // DONE: suss out the item picked from the select list
   let itemPicked = document.getElementById('items').value;
-  console.log(itemPicked);
-  // TODO: get the quantity
-  // TODO: using those, add one item to the Cart
+  // DONE: get the quantity
+  let quantityPicked = +document.getElementById('quantity').value;
+  // DONE: using those, add one item to the Cart
+  cart.addItem(itemPicked, quantityPicked);
 }
 
-// TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+// DONE: Update the cart count in the header nav with the number of items in the Cart
+function updateCounter() {
+  //set counter
+  //loop through items in cart and count
+  //innerhtml of element will be number from our count
+  let itemCount = document.getElementById('itemCount');
+  let count = cart.items.length;
+  itemCount.textContent = `${count}`;
+}
 
-// TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
+// DONE: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
-  // TODO: Get the item and quantity from the form
-  // TODO: Add a new element to the cartContents div with that information
+  // DONE: Get the item and quantity from the form
+  let itemPicked = document.getElementById('items').value;
+  let quantityPicked = +document.getElementById('quantity').value;
+  // DONE: Add a new element to the cartContents div with that information
+  let cartContents = document.getElementById('cartContents');
+  let p = document.createElement('p');
+  p.textContent = `${itemPicked} : ${quantityPicked}`;
+  cartContents.appendChild(p);
 }
 
 // Set up the "submit" event listener on the form.
