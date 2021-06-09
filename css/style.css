@@ -36,4 +36,17 @@ main{
   border: 1px solid #3D348B;
   text-align: center;
   background-color: #E0E2DB;
+  border-radius: 20px;
 }
+
+section fieldset{
+  margin: 20px;
+  padding: 10px;
+}
+
+section #cart th{
+  margin: 20px;
+  padding: 25px;
+  text-align: center;
+}
+
