@@ -1,12 +1,14 @@
 /* TODO: Make it awesome */
 
-*{
+body{
 
-  background-color: aqua;
+  background-color: #E6AF2E;
+  margin: 30px;
   
 }
 
-header h1, header nav{ 
+header h1, 
+header nav{ 
   width: 50%;
   text-align: center;
   padding: 10px;
@@ -17,8 +19,8 @@ header ul li{
   
   display: inline-block;
   padding: 20px;
-  /* border: 1px solid black; */
   margin: 0px 50px 0px 50px;
+  font-size: 25px;
   
 }
 
@@ -29,3 +31,26 @@ body header h1{
 main section header h1{
   font-size: 50px;
 }
+
+main{
+  border: 1px solid #3D348B;
+  text-align: center;
+  background-color: #E0E2DB;
+  border-radius: 20px;
+}
+
+section fieldset{
+  margin: 20px;
+  padding: 10px;
+}
+
+section #cart th{
+  margin: 20px;
+  padding: 25px;
+  text-align: center;
+}
+
+table{
+  margin: auto;  
+}
+
